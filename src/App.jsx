@@ -1,6 +1,6 @@
 import React from 'react'
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
-import Navbar from './components/layouts/navbar'
+import Navbar from './components/layouts/Navbar'
 import Footer from './components/layouts/Footer'
 import Login from './pages/Login/Login'
 import Register from './pages/Login/Register'

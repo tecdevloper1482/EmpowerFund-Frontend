@@ -1,0 +1,280 @@
+.page {
+  min-height: 100vh;
+  padding: 28px 24px 42px;
+  color: #e7eefc;
+  background: radial-gradient(circle at 8% 0%, rgba(59, 130, 246, 0.22), transparent 30%), #0f172a;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 3.2vw, 2.25rem);
+  color: #f8fbff;
+}
+
+.header p {
+  margin: 8px 0 0;
+  color: #9eb2d8;
+}
+
+.summaryGrid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.statCard {
+  background: linear-gradient(180deg, #1b2941 0%, #152137 100%);
+  border: 1px solid #334b73;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.statIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(59, 130, 246, 0.16);
+  display: grid;
+  place-items: center;
+  color: #7cb3ff;
+  font-size: 1.2rem;
+}
+
+.statTitle {
+  margin: 0;
+  color: #9db4da;
+  font-size: 0.82rem;
+}
+
+.statValue {
+  margin: 4px 0 0;
+  font-size: 1.2rem;
+  color: #f6f9ff;
+}
+
+.middleGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 14px;
+}
+
+.panel {
+  margin-top: 16px;
+  background: linear-gradient(180deg, #17253d 0%, #111c2f 100%);
+  border: 1px solid #324863;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.panelHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.panelHead h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #f4f8ff;
+}
+
+.panelIcon {
+  color: #81b5ff;
+}
+
+.chartSvg {
+  width: 100%;
+  height: 260px;
+  overflow: visible;
+}
+
+.chartArea {
+  fill: url(#trendFill);
+}
+
+.gridLine {
+  stroke: rgba(148, 163, 184, 0.16);
+  stroke-width: 1;
+}
+
+.chartLine {
+  fill: none;
+  stroke: #4a8dff;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chartDot {
+  fill: #9bc5ff;
+  stroke: #122035;
+  stroke-width: 2;
+}
+
+.chartLabel {
+  fill: #8faad3;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.emptyChart {
+  display: grid;
+  gap: 8px;
+  min-height: 220px;
+  place-items: center;
+  text-align: center;
+}
+
+.emptyHint {
+  margin: 0;
+  color: #8faad3;
+  font-size: 0.9rem;
+}
+
+.activityList,
+.notificationList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.activityList li,
+.notificationList li {
+  border: 1px solid #2d4364;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: rgba(14, 23, 38, 0.72);
+}
+
+.activityList p,
+.notificationList p {
+  margin: 0;
+  color: #deebff;
+}
+
+.activityList span,
+.notificationList span {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: #8faad3;
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 760px;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid #2c4160;
+  padding: 10px 8px;
+}
+
+th {
+  color: #97afd6;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+td {
+  color: #e4edff;
+  font-size: 0.88rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.active {
+  background: rgba(56, 189, 248, 0.15);
+  color: #7dd3fc;
+}
+
+.completed {
+  background: rgba(74, 222, 128, 0.15);
+  color: #86efac;
+}
+
+.failed {
+  background: rgba(248, 113, 113, 0.15);
+  color: #fca5a5;
+}
+
+.rowProgress {
+  margin-bottom: 4px;
+  width: 140px;
+  height: 6px;
+  background: #2d4464;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.rowProgress span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #4a9bff 0%, #2f6dff 100%);
+}
+
+.emptyBox,
+.emptyWrap,
+.loading,
+.error {
+  color: #9db4da;
+}
+
+.emptyWrap {
+  display: grid;
+  gap: 8px;
+  place-items: start;
+}
+
+.ctaLink {
+  color: #87b6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.loading,
+.error {
+  padding: 40px;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .summaryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .middleGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .page {
+    padding: 18px 12px 26px;
+  }
+
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}

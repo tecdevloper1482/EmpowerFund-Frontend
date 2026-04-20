@@ -1,0 +1,30 @@
+.footer {
+  padding: 18px 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(109, 130, 175, 0.15);
+  color: #748ab3;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+}
+
+.links a {
+  color: #8ca2cb;
+  text-decoration: none;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 16px;
+    gap: 12px;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,291 @@
+.page {
+	width: min(1200px, 100%);
+	margin: 0 auto;
+}
+
+.layout {
+	display: grid;
+	grid-template-columns: 1.6fr 0.9fr;
+	gap: 20px;
+}
+
+.mainContent {
+	border-radius: 14px;
+	border: 1px solid rgba(103, 133, 191, 0.2);
+	background: linear-gradient(180deg, rgba(15, 30, 59, 0.9) 0%, rgba(10, 20, 43, 0.9) 100%);
+	overflow: hidden;
+}
+
+.heroImage {
+	width: 100%;
+	height: 370px;
+	object-fit: cover;
+	display: block;
+}
+
+.body {
+	padding: 20px;
+}
+
+.category {
+	color: #70adff;
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.body h1 {
+	margin: 10px 0 0;
+	color: #f0f7ff;
+	font-size: clamp(1.8rem, 3vw, 2.5rem);
+	line-height: 1.14;
+}
+
+.creator {
+	margin: 10px 0 0;
+	color: #9eb5d8;
+}
+
+.description {
+	margin: 14px 0 0;
+	color: #d1def5;
+	line-height: 1.7;
+	white-space: pre-wrap;
+}
+
+.sidebar {
+	position: relative;
+}
+
+.sidebarCard {
+	position: sticky;
+	top: 22px;
+	border-radius: 14px;
+	border: 1px solid rgba(103, 133, 191, 0.2);
+	background: linear-gradient(180deg, rgba(15, 30, 59, 0.9) 0%, rgba(10, 20, 43, 0.9) 100%);
+	padding: 18px;
+}
+
+.sidebarCard h2 {
+	margin: 0;
+	color: #eff6ff;
+	font-size: 1.3rem;
+}
+
+.statRow {
+	margin-top: 12px;
+	display: flex;
+	justify-content: space-between;
+	color: #9ab2d8;
+}
+
+.statRow strong {
+	color: #e7f0ff;
+}
+
+.progressTrack {
+	margin-top: 16px;
+	width: 100%;
+	height: 8px;
+	border-radius: 99px;
+	background: rgba(59, 90, 138, 0.7);
+	overflow: hidden;
+}
+
+.progressTrack span {
+	display: block;
+	height: 100%;
+	background: linear-gradient(90deg, #45a1ff 0%, #377bff 100%);
+}
+
+.progressText {
+	margin: 9px 0 0;
+	color: #9db6de;
+	font-size: 0.86rem;
+}
+
+.fundBtn {
+	margin-top: 18px;
+	width: 100%;
+	height: 48px;
+	border: 0;
+	border-radius: 10px;
+	color: #f1f8ff;
+	background: linear-gradient(180deg, #2f72ff 0%, #2866f1 100%);
+	font-size: 1rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.paymentOverlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(2, 8, 23, 0.65);
+	display: grid;
+	place-items: center;
+	padding: 16px;
+	z-index: 1000;
+}
+
+.paymentCard {
+	width: min(420px, 100%);
+	background: linear-gradient(180deg, #1b2a44 0%, #121f35 100%);
+	border: 1px solid rgba(103, 133, 191, 0.35);
+	border-radius: 12px;
+	padding: 18px;
+	box-shadow: 0 16px 36px rgba(2, 9, 30, 0.45);
+	display: grid;
+	gap: 12px;
+	color: #eef5ff;
+}
+
+.paymentCard h3 {
+	margin: 0;
+	font-size: 1.2rem;
+	color: #f0f7ff;
+}
+
+.paymentHint {
+	margin: 0;
+	color: #b7caea;
+	font-size: 0.92rem;
+	line-height: 1.4;
+}
+
+.qrImage {
+	width: 180px;
+	height: 180px;
+	justify-self: center;
+	object-fit: cover;
+	border-radius: 10px;
+	border: 1px solid rgba(103, 133, 191, 0.4);
+	background: #f8fbff;
+	padding: 8px;
+}
+
+.paymentLabel {
+	font-size: 0.88rem;
+	color: #c7d8f4;
+}
+
+.paymentInput {
+	height: 42px;
+	border-radius: 8px;
+	border: 1px solid rgba(103, 133, 191, 0.45);
+	background: rgba(7, 19, 41, 0.8);
+	color: #eef5ff;
+	padding: 0 12px;
+	font-size: 1rem;
+}
+
+.paymentInput::placeholder {
+	color: #91a9cf;
+}
+
+.paymentActions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	margin-top: 4px;
+}
+
+.cancelBtn,
+.confirmBtn {
+	border: none;
+	border-radius: 8px;
+	height: 38px;
+	padding: 0 14px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.cancelBtn {
+	background: #334155;
+	color: #f8fbff;
+}
+
+.confirmBtn {
+	background: linear-gradient(180deg, #2f72ff 0%, #2866f1 100%);
+	color: #f8fbff;
+}
+
+.confirmBtn:disabled {
+	opacity: 0.7;
+	cursor: not-allowed;
+}
+
+.stateText {
+	color: #aac1e2;
+}
+
+.errorText {
+	color: #ffadb6;
+}
+
+.carouselWrap {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carouselArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(30, 41, 59, 0.7);
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.carouselArrow.left {
+  left: 10px;
+}
+.carouselArrow.right {
+  right: 10px;
+}
+.carouselArrow:hover {
+  background: #377bff;
+}
+
+.carouselIndicators {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #9eb5d8;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+}
+.activeDot {
+  width: 12px;
+  height: 12px;
+  background: #377bff;
+  opacity: 1;
+  border: 2px solid #fff;
+}
+
+@media (max-width: 980px) {
+	.layout {
+		grid-template-columns: 1fr;
+	}
+
+	.sidebarCard {
+		position: static;
+	}
+}

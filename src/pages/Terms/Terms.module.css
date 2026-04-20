@@ -1,0 +1,109 @@
+.page {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  padding: 24px 16px 54px;
+  color: #dbe8ff;
+}
+
+.hero {
+  border-radius: 14px;
+  border: 1px solid rgba(109, 149, 224, 0.26);
+  background: linear-gradient(165deg, rgba(16, 36, 72, 0.9) 0%, rgba(8, 22, 45, 0.95) 100%);
+  box-shadow: inset 0 0 0 1px rgba(88, 122, 188, 0.14);
+  padding: 24px 22px;
+  margin-bottom: 18px;
+}
+
+.kicker {
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  color: #8fb7ff;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  color: #f5f8ff;
+}
+
+.subtitle {
+  margin: 12px 0 0;
+  color: #b9caea;
+  line-height: 1.55;
+}
+
+.meta {
+  margin-top: 14px;
+  color: #8ea6d5;
+  font-size: 0.9rem;
+}
+
+.termsCard {
+  border-radius: 14px;
+  border: 1px solid rgba(103, 141, 209, 0.22);
+  background: linear-gradient(180deg, rgba(11, 26, 53, 0.92) 0%, rgba(9, 20, 42, 0.92) 100%);
+  padding: 22px;
+}
+
+.section + .section {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(98, 132, 192, 0.22);
+}
+
+.section h2 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  line-height: 1.35;
+  color: #f0f5ff;
+}
+
+.section p,
+.section li {
+  color: #c3d4f2;
+  line-height: 1.6;
+}
+
+.section p {
+  margin: 0;
+}
+
+.section p + p {
+  margin-top: 10px;
+}
+
+.section ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.section li + li {
+  margin-top: 8px;
+}
+
+.section a {
+  color: #87b2ff;
+  text-decoration: none;
+}
+
+.section a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 16px 12px 40px;
+  }
+
+  .hero,
+  .termsCard {
+    padding: 18px 14px;
+  }
+
+  .section h2 {
+    font-size: 1.07rem;
+  }
+}

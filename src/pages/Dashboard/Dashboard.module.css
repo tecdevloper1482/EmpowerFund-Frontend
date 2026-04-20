@@ -1,0 +1,169 @@
+.dashboard {
+  padding: 2rem;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.header p {
+  color: #94a3b8;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statCard {
+  background-color: #1e293b;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #334155;
+}
+
+.statIcon {
+  font-size: 1.5rem;
+}
+
+.statInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.statTitle {
+  color: #94a3b8;
+  font-size: 0.875rem;
+}
+
+.statValue {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chartContainer, .projectsTable {
+  background-color: #1e293b;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #334155;
+}
+
+.projectsTable {
+  overflow-x: hidden;
+}
+
+.chartContainer h2, .projectsTable h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.chartSvg {
+  width: 100%;
+  height: 360px;
+  display: block;
+}
+
+.chartAxis {
+  stroke: #334155;
+  stroke-width: 2;
+}
+
+.chartArea {
+  fill: url(#performanceFill);
+  opacity: 0.35;
+}
+
+.chartLine {
+  fill: none;
+  stroke: #4a90e2;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.chartDot {
+  fill: #93c5fd;
+  stroke: #0f172a;
+  stroke-width: 2;
+}
+
+.emptyChart {
+  color: #94a3b8;
+  padding: 2rem 0;
+}
+
+.projectsTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.projectsTable th, .projectsTable td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #334155;
+}
+
+.projectsTable th {
+  color: #94a3b8;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.draft {
+  background-color: #4b5563;
+  color: #e5e7eb;
+}
+
+.launched {
+  background-color: #10b981;
+  color: #fff;
+}
+
+.actions button {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  cursor: pointer;
+  margin-right: 0.5rem;
+}
+
+.loading {
+  text-align: center;
+  padding: 4rem;
+  font-size: 1.25rem;
+}

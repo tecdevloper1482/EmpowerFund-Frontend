@@ -1,0 +1,41 @@
+.dashboardShell {
+  display: flex;
+  min-height: 100vh;
+  background-color: #0f172a;
+}
+
+.mainContent {
+  flex: 1;
+  margin-left: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: margin-left 0.3s ease;
+  background-color: #0f172a;
+  box-sizing: border-box;
+}
+
+/* Adjust margin when sidebar is collapsed */
+.mainContent.collapsed {
+  margin-left: 80px;
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 80px;
+  }
+
+  .mainContent.collapsed {
+    margin-left: 250px;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .dashboardShell {
+    flex-direction: column;
+  }
+
+  .mainContent {
+    margin-left: 0;
+  }
+}

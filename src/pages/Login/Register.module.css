@@ -1,0 +1,241 @@
+.loginWrap {
+	width: 100%;
+	display: grid;
+	place-items: center;
+}
+
+.card {
+	width: min(100%, 520px);
+	padding: 34px 30px 30px;
+	border-radius: 12px;
+	border: 1px solid rgba(113, 140, 196, 0.17);
+	background: linear-gradient(180deg, rgba(19, 34, 66, 0.92) 0%, rgba(11, 24, 50, 0.92) 100%);
+	box-shadow: 0 26px 70px rgba(2, 9, 30, 0.48);
+	color: #eaf0ff;
+}
+
+.header {
+	text-align: center;
+	margin-bottom: 22px;
+}
+
+.header h1 {
+	margin: 0;
+	font-size: clamp(2rem, 4vw, 2.75rem);
+	line-height: 1.1;
+	letter-spacing: -0.03em;
+	color: #eef3ff;
+}
+
+.header p {
+	margin-top: 10px;
+	color: #96a8cc;
+	font-size: 0.98rem;
+}
+
+.roleSwitch {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background: #05122d;
+	border: 1px solid rgba(106, 132, 184, 0.28);
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 24px;
+}
+
+.roleBtn {
+	height: 62px;
+	border: none;
+	background: transparent;
+	color: #c7d3ef;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.roleBtn.active {
+	background: linear-gradient(180deg, #2f72ff 0%, #2866f1 100%);
+	color: #f7fbff;
+}
+
+.icon {
+	font-size: 1.05rem;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+
+.label {
+	font-size: 0.95rem;
+	color: #dee7ff;
+	margin-bottom: 8px;
+}
+
+.inputWrap {
+	display: flex;
+	align-items: center;
+	height: 52px;
+	border: 1px solid rgba(122, 145, 186, 0.35);
+	border-radius: 10px;
+	background: rgba(4, 13, 34, 0.78);
+	margin-bottom: 16px;
+}
+
+.inputIcon {
+	margin-left: 14px;
+	color: #8093b9;
+	font-size: 0.9rem;
+}
+
+.inputWrap input {
+	flex: 1;
+	height: 100%;
+	border: none;
+	background: transparent;
+	color: #f3f7ff;
+	padding: 0 12px;
+	outline: none;
+	font-size: 0.98rem;
+}
+
+.inputWrap input::placeholder {
+	color: #5d7097;
+}
+
+.eyeBtn {
+	border: none;
+	background: transparent;
+	color: #8ca0c9;
+	font-size: 1rem;
+	cursor: pointer;
+	margin-right: 12px;
+}
+
+.errorText {
+	margin: 0 0 12px;
+	font-size: 0.9rem;
+	color: #ff9ea5;
+}
+
+.successText {
+	margin: 0 0 12px;
+	font-size: 0.9rem;
+	color: #8ff3b3;
+}
+
+.terms {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: #8ca0c7;
+	font-size: 0.85rem;
+	margin: 2px 0 20px;
+}
+
+.terms input {
+	width: 15px;
+	height: 15px;
+	accent-color: #3478ff;
+}
+
+.terms a {
+	color: #6fa2ff;
+	text-decoration: none;
+}
+
+.submitBtn {
+	width: 100%;
+	height: 50px;
+	border: none;
+	border-radius: 10px;
+	background: linear-gradient(180deg, #2f72ff 0%, #2866f1 100%);
+	color: #f3f8ff;
+	font-size: 1.05rem;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.submitBtn:disabled {
+	opacity: 0.7;
+	cursor: wait;
+}
+
+.divider {
+	margin: 24px 0 16px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	color: #7084ad;
+	font-size: 0.75rem;
+	letter-spacing: 0.14em;
+}
+
+.divider::before,
+.divider::after {
+	content: '';
+	height: 1px;
+	flex: 1;
+	background: rgba(123, 147, 188, 0.22);
+}
+
+.socialRow {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 12px;
+}
+
+.socialBtn {
+	height: 44px;
+	border-radius: 10px;
+	border: 1px solid rgba(125, 148, 188, 0.4);
+	background: rgba(6, 19, 45, 0.72);
+	color: #f3f7ff;
+	font-weight: 600;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	cursor: pointer;
+}
+
+.socialIcon {
+	width: 18px;
+	height: 18px;
+	display: inline-grid;
+	place-items: center;
+	font-size: 0.85rem;
+}
+
+.switchAuth {
+	margin: 18px 0 0;
+	font-size: 0.9rem;
+	text-align: center;
+	color: #8ca0c7;
+}
+
+.switchAuth a {
+	color: #8db4ff;
+	text-decoration: none;
+}
+
+@media (max-width: 640px) {
+	.card {
+		padding: 26px 18px 22px;
+	}
+
+	.roleBtn {
+		height: 56px;
+		font-size: 0.95rem;
+	}
+
+	.socialRow {
+		grid-template-columns: 1fr;
+	}
+}

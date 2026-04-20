@@ -26,7 +26,7 @@ const Login = () => {
 		}
 
 		setIsSubmitting(true)
-		const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
+		const apiBaseUrl = import.meta.env.VITE_API_URL'
 
 		try {
 			const response = await fetch(`${apiBaseUrl}/auth/login`, {

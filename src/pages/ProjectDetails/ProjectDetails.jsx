@@ -17,7 +17,7 @@ const ProjectDetails = () => {
 	const [fundAmount, setFundAmount] = useState('');
 	const [isInvesting, setIsInvesting] = useState(false);
 
-	const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'http://localhost:5000/api', []);
+	const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'https://empowerfund-backend.onrender.com/api', []);
 
 	// Fetch project details
 	const fetchProject = async () => {

@@ -23,7 +23,7 @@ const Profile = () => {
   const [isSavingProfile, setIsSavingProfile] = useState(false);
   const [isChangingPassword, setIsChangingPassword] = useState(false);
 
-  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'http://localhost:5000/api', []);
+  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'https://empowerfund-backend.onrender.com/api', []);
 
   const storedAuth = localStorage.getItem('empowerfund_auth');
   const auth = storedAuth ? JSON.parse(storedAuth) : null;

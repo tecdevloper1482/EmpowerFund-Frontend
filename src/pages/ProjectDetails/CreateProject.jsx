@@ -23,7 +23,7 @@ const CreateProject = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const progress = useMemo(() => (step / 3) * 100, [step]);
-  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'http://localhost:5000/api', []);
+  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'https://empowerfund-backend.onrender.com/api', []);
 
   const getAuth = () => {
     const storedAuth = localStorage.getItem('empowerfund_auth');

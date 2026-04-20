@@ -41,7 +41,6 @@ const Sidebar = () => {
       <div className={styles.header}>
         <div className={styles.logo}>
           <span className={styles.logoIcon}><FiZap aria-hidden="true" /></span>
-          {isExpanded && <span className={styles.logoText}>EmpowerFund</span>}
         </div>
         {isExpanded && <p className={styles.subtitle}>{isInvestor ? 'Investor Hub' : 'Creator Hub'}</p>}
       </div>

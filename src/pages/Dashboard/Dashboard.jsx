@@ -63,7 +63,7 @@ const Dashboard = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'https://empowerfund-backend.onrender.com/api', []);
+  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'http://localhost:5000/api', []);
   const storedAuth = localStorage.getItem('empowerfund_auth');
   const auth = storedAuth ? JSON.parse(storedAuth) : null;
 

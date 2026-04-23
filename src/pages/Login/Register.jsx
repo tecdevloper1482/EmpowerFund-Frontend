@@ -44,7 +44,7 @@ const Register = () => {
     }
 
     setIsSubmitting(true)
-    const apiBaseUrl = import.meta.env.VITE_API_URL || 'https://empowerfund-backend.onrender.com/api'
+    const apiBaseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api'
 
     try {
       const response = await fetch(`${apiBaseUrl}/auth/register`, {

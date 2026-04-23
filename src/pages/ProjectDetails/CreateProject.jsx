@@ -23,7 +23,7 @@ const CreateProject = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const progress = useMemo(() => (step / 3) * 100, [step]);
-  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'https://empowerfund-backend.onrender.com/api', []);
+  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'http://localhost:5000/api', []);
 
   const getAuth = () => {
     const storedAuth = localStorage.getItem('empowerfund_auth');
@@ -191,52 +191,6 @@ const CreateProject = () => {
     }
   };
 
-  const handleSave = async () => {
-    const validationError = validateStep(3);
-    if (validationError) {
-      setError(validationError);
-      return;
-    }
-
-    const auth = getAuth();
-    const isCreator = auth?.role === 'Creator';
-
-    if (!isCreator) {
-      setError('You do not have permission to create projects.');
-      return;
-    }
-
-    setIsSubmitting(true);
-    setError('');
-
-    try {
-      const payload = createProjectPayload();
-      const response = await fetch(`${apiBaseUrl}/projects`, {
-        method: 'POST',
-        headers: {
-          ...(payload.isMultipart ? {} : { 'Content-Type': 'application/json' }),
-          Authorization: `Bearer ${auth.token}`,
-        },
-        body: payload.body,
-      });
-
-      const data = await response.json().catch(() => null);
-
-      if (!response.ok) {
-        setError(data?.message || 'Failed to save project.');
-        return;
-      }
-
-      const savedProject = data;
-      console.log('Project saved:', savedProject);
-      navigate('/projects');
-    } catch {
-      setError('Server connection failed. Please try again.');
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
   return (
     <section className={styles.pageWrap}>
       <div className={styles.card}>
@@ -358,9 +312,6 @@ const CreateProject = () => {
                 {isSubmitting ? 'Publishing...' : 'Publish Project'}
               </button>
             )}
-            <button type="button" onClick={handleSave} disabled={isSubmitting}>
-              Save
-            </button>
           </div>
         </form>
       </div>

@@ -28,9 +28,9 @@
   left: 32px;
   transform: translateY(-50%);
   width: min(640px, calc(100% - 64px));
-  background: rgba(14, 35, 59, 0.58);
-  border: 1px solid rgba(146, 183, 255, 0.2);
-  backdrop-filter: blur(8px);
+  background: rgba(14, 35, 59, 0.28);
+  border: 1px solid rgba(146, 183, 255, 0.14);
+  backdrop-filter: blur(1px);
   border-radius: 14px;
   padding: 26px 24px 24px;
 }

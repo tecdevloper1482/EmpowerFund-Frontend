@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import styles from './Navbar.module.css';
-import logo from '../../assets/logo.png';
 
 const Navbar = () => {
   const location = useLocation();
@@ -60,7 +59,7 @@ const Navbar = () => {
     <nav className={styles.navbar}>
       <div className={styles.logoContainer}>
         <Link to="/" className={styles.logoLink}>
-          <img src={logo} alt="EmpowerFund logo" className={styles.logoImage} />
+          <span className={styles.logoWordmark}>EmpowerFund</span>
         </Link>
       </div>
       <div className={styles.navLinks}>

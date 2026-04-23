@@ -90,7 +90,7 @@ const InvestorDashboard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
-  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'https://empowerfund-backend.onrender.com/api', []);
+  const apiBaseUrl = useMemo(() => import.meta.env.VITE_API_URL || 'http://localhost:5000/api', []);
   const auth = useMemo(() => {
     const stored = localStorage.getItem('empowerfund_auth');
     if (!stored) return null;

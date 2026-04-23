@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 38px;
+  min-height: 78px;
+  padding: 12px 38px;
   border-bottom: 1px solid rgba(109, 130, 175, 0.15);
 }
 
@@ -18,11 +19,13 @@
   text-decoration: none;
 }
 
-.logoImage {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-  display: block;
+.logoWordmark {
+  font-size: 1.85rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: #f4f8ff;
+  text-shadow: 0 10px 24px rgba(33, 95, 255, 0.24);
 }
 
 .navLinks {
@@ -88,12 +91,12 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 16px;
+    min-height: 66px;
+    padding: 10px 16px;
   }
 
-  .logoImage {
-    width: 52px;
-    height: 52px;
+  .logoWordmark {
+    font-size: 1.3rem;
   }
 
   .linkText {
